@@ -1,11 +1,17 @@
 import React from 'react'
-import { Text, View } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native'; //quitar notch de ios
+import { CalculadoraScreen } from './src/screens/CalculadoraScreen';
+import { styles } from './src/theme/appTheme';
 
 const App = () => {
   return (
-    <View>
-      <Text>Hola Calculadora</Text>
-    </View>
+    <SafeAreaView style={styles.fondo}>
+      <StatusBar 
+        backgroundColor="black" //color del notch
+        barStyle="light-content"
+      />
+      <CalculadoraScreen />
+    </SafeAreaView>
   )
 }
 
